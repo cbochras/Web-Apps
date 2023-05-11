@@ -1,0 +1,121 @@
+.task-list {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-task-item-bg);
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 25px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+
+    @media (min-width: 414px) {
+      flex-direction: row;
+      padding: 30px;
+    }
+  }
+
+  &-itemContent {
+    flex-grow: 1;
+
+    @media (min-width: 414px) {
+      padding-right: 30px;
+    }
+  }
+
+  &-itemTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    @media (min-width: 414px) {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-itemOverallTime {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    @media (min-width: 414px) {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-itemLogs {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .showMore & {
+      display: flex;
+    }
+  }
+
+  &-itemLog {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 16px;
+    margin-top: 10px;
+
+    &:last-child {
+      color: var(--color-blue);
+    }
+
+    @media (min-width: 414px) {
+      font-size: 20px;
+    }
+  }
+
+  &-itemAction {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    @media (min-width: 414px) {
+      justify-content: center;
+      margin-top: 0;
+    }
+  }
+
+  &-showMore {
+    display: none;
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    border-top: 1px solid var(--bg-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &:hover {
+      background-color: var(--bg-color);
+    }
+
+    .showMore & .dots {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.long, .diff {
+  font-size: 14px;
+}
+
+.dots {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: var(--color-grey);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin: 6px 3px;
+  transition: all 0.3s ease-in-out;
+}

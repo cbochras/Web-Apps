@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": " Let's Focus - To keep you focused on your tasks",
+  "short_name": "Let's Focus",
+  "description": "Web App to focus on your tasks",
+  "version": "1.0.2",
+  "author": "Cherifa Bochra Soltani",
+  "icons": {
+    "128": "icon.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
