@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Scroll Extension",
+  "version": "1.0",
+  "description": "A Chrome extension to scroll up and down on a website",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
